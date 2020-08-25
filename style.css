@@ -1,0 +1,129 @@
+/* COLORS AND FONT */
+
+:root {
+  --clr1: #e8ebe4;
+  --clr2: #595758;
+  --clr3: #f25757;
+  --font: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* COMPONENTS */
+
+/* CENTERING TEXT */
+.center-text {
+  text-align: center;
+}
+
+/* RESET STYLES */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font);
+  background-color: var(--clr1);
+  color: var(--clr2);
+}
+
+/* TODO CONTAINER */
+
+.todo-container {
+  margin: 5rem auto;
+  display: flex;
+  flex-flow: column;
+  width: 50%;
+  min-height: 500px;
+  padding: 0 1.5rem 1rem;
+  box-shadow: 0 0 20px 5px var(--clr3);
+  background-color: var(--clr2);
+  border-radius: 1rem;
+}
+
+/* TODO HEADING */
+
+.todo-title {
+  color: var(--clr1);
+  padding: 1rem;
+}
+
+/* TODO LIST */
+
+.todo-list {
+  list-style-type: none;
+  padding: 0 1rem 1rem;
+}
+
+/* TODO TASK */
+
+.todo-task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  margin: 0 0 1.5rem;
+  background-color: var(--clr1);
+  border-radius: 0.35rem;
+  box-shadow: 0 0 5px var(--clr1);
+}
+
+.todo-para {
+  font-weight: 500;
+  width: 95%;
+  text-transform: uppercase;
+}
+
+.todo-icon {
+  font-size: 1.2rem;
+  color: var(--clr3);
+  cursor: pointer;
+}
+
+/*BUTTONS*/
+
+.button-box {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
+}
+
+.task-button {
+  display: block;
+  font-size: 1.2rem;
+  padding: 0.8rem 1.2rem;
+  width: 35%;
+  color: var(--clr1);
+  background-color: var(--clr3);
+  outline: none;
+  border: none;
+  border-radius: 2rem;
+  box-shadow: 0 0 5px var(--clr1);
+  cursor: pointer;
+}
+
+/*INPUT*/
+
+input[type="text"] {
+  display: block;
+  width: 95%;
+  margin: auto;
+  margin-bottom: 2rem;
+  padding: 0.5rem 1rem;
+  color: var(--clr2);
+  background-color: var(--clr1);
+  font-size: 1.2rem;
+  outline: none;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 0 5px var(--clr1);
+}
+
+/*HIDDEN*/
+.hidden {
+  display: none;
+}

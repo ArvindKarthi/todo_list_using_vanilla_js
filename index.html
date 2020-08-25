@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <title>TODO_List</title>
+  </head>
+  <body>
+    <div class="todo-container">
+      <h1 class="todo-title center-text">TODO LIST</h1>
+      <ul class="todo-list">
+        <li class="todo-task">
+          <p class="todo-para">Task One</p>
+          <i class="far fa-trash-alt todo-icon"></i>
+        </li>
+        <li class="todo-task">
+          <p class="todo-para">Task One</p>
+          <i class="far fa-trash-alt todo-icon"></i>
+        </li>
+        <li class="todo-task">
+          <p class="todo-para">Task One</p>
+          <i class="far fa-trash-alt todo-icon"></i>
+        </li>
+      </ul>
+      <div class="button-box">
+        <button class="add-button task-button">ADD NEW</button>
+        <button class="show-button task-button">SHOW DELETED</button>
+      </div>
+      <form class="task-form hidden">
+        <input type="text" name="new-task" placeholder="add a task" />
+      </form>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
