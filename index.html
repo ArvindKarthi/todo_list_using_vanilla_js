@@ -15,27 +15,18 @@
   <body>
     <div class="todo-container">
       <h1 class="todo-title center-text">TODO LIST</h1>
-      <ul class="todo-list">
-        <li class="todo-task">
-          <p class="todo-para">Task One</p>
-          <i class="far fa-trash-alt todo-icon"></i>
-        </li>
-        <li class="todo-task">
-          <p class="todo-para">Task One</p>
-          <i class="far fa-trash-alt todo-icon"></i>
-        </li>
-        <li class="todo-task">
-          <p class="todo-para">Task One</p>
-          <i class="far fa-trash-alt todo-icon"></i>
-        </li>
-      </ul>
+      <ul class="todo-list"></ul>
       <div class="button-box">
         <button class="add-button task-button">ADD NEW</button>
         <button class="show-button task-button">SHOW DELETED</button>
       </div>
-      <form class="task-form hidden">
+      <form class="task-form">
         <input type="text" name="new-task" placeholder="add a task" />
       </form>
+      <div class="hidden">
+        <ul class="deleted-list"></ul>
+        <button class="clear-list task-button">CLEAR LIST</button>
+      </div>
     </div>
     <script src="./app.js"></script>
   </body>

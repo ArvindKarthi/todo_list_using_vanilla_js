@@ -127,3 +127,16 @@ input[type="text"] {
 .hidden {
   display: none;
 }
+
+.deleted-list {
+  padding: 0 1rem 1rem;
+}
+
+.deleted-list .todo-para {
+  width: 90%;
+}
+
+.clear-list {
+  display: block;
+  margin: 0 auto 2rem;
+}
