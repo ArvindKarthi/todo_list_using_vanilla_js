@@ -140,3 +140,10 @@ input[type="text"] {
   display: block;
   margin: 0 auto 2rem;
 }
+
+.not-found {
+  display: none;
+  margin: 1.5rem;
+  font-size: 1rem;
+  color: var(--clr1);
+}

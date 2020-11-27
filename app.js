@@ -19,6 +19,8 @@ const hiddenList = document.querySelector(".deleted-list");
 const showButton = document.querySelector(".show-button");
 //this is the button to clear the all deleted task.
 const clearAll = document.querySelector(".clear-list");
+//this is to get the search text .
+const search = document.querySelector(`input[name="search"]`);
 
 /* To toggle the form display */
 addButton.addEventListener("click", () => {
@@ -99,4 +101,34 @@ clearAll.addEventListener("click", () => {
     hiddenList.innerHTML = "";
     hiddenList.parentNode.classList.toggle("hidden");
   }
+});
+
+/*To make an search field to search and filter the tasks*/
+
+const filterList = (value) => {
+  const childElements = todoList.children;
+  let found = false;
+  for (let itr = 0; itr < childElements.length; itr++) {
+    const curr = childElements[itr].querySelector("p");
+    if (!curr.textContent.toLowerCase().includes(value) && value !== "") {
+      curr.parentElement.style.display = "none";
+    } else {
+      found = true;
+      curr.parentElement.style.display = "flex";
+    }
+  }
+  return value === "" ? true : found;
+};
+
+search.addEventListener("keyup", (event) => {
+  if (filterList(event.target.value.trim().toLowerCase())) {
+    document.querySelector(".not-found").style.display = "none";
+  } else {
+    document.querySelector(".not-found").style.display = "block";
+  }
+});
+
+/* to prevent the submit action of the form */
+search.parentElement.addEventListener("submit", (event) => {
+  event.preventDefault();
 });
